@@ -1,0 +1,25 @@
+:root {
+  --galactic-blue: #755cde;
+  --summer-yellow: #f6a560;
+  --pink: #f39e9e;
+  --light-red: #eb7565;
+  --cyan: #61c4b7;
+  --black: #030303;
+  --medium-brown: #7a746e;
+  --light-cream: #fff7f0;
+  --dark-purple: #552049;
+  --heading-L: 56px;
+  --heading-M: 40px;
+  --heading-S: 32px;
+  --font-size: 18px;
+  --font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family);
+}
