@@ -177,13 +177,19 @@ p {
   background-color: var(--dark-purple);
 }
 
+/*About section*/
 .about-section,
+.booking-section,
 .about-section div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+.about-section,
+.my-work-section {
+  margin-bottom: var(--margin-btw-content);
 }
 h2 {
   font-size: var(--heading-M);
@@ -201,6 +207,8 @@ h2 {
   gap: 20px;
   overflow: hidden;
 }
+
+/*slider section*/
 .slider {
   display: flex;
   flex-direction: row;
@@ -223,6 +231,7 @@ h2 {
   border-radius: 50%;
   padding: 20px;
 }
+
 @media only screen and (min-width: 768px) {
   .wrapper {
     max-width: 600px;
@@ -268,7 +277,6 @@ h2 {
   .motion-graphics-card {
     grid-area: motion-graphics;
   }
-
   /* .skills-section {
     flex-direction: row;
   }
