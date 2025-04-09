@@ -55,6 +55,8 @@ button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+header button {
   background-color: var(--black);
 }
 .hero-section {
@@ -63,13 +65,17 @@ button {
   width: 100%;
   margin-bottom: var(--margin-btw-content);
 }
-h1 {
-  height: 90;
+h1,
+h2,
+h3 {
   font-weight: bold;
-  font-size: 36px;
   width: 100%;
   text-align: center;
   padding: 12px;
+}
+h1 {
+  height: 90;
+  font-size: 36px;
   color: var(--black);
 }
 p {
@@ -79,6 +85,24 @@ p {
 .hero-section p {
   height: 104px;
   padding: 20px 29px;
+}
+.about-section,
+.about-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+h2 {
+  font-size: var(--heading-M);
+}
+.about-section img {
+  width: 80%;
+  height: 300px;
+}
+.about-section button {
+  background-color: var(--light-red);
 }
 @media only screen and (min-width: 768px) {
   .wrapper {
@@ -95,6 +119,20 @@ p {
   .hero-section p {
     height: 56px;
     width: 80%;
+  }
+  .about-section {
+    flex-direction: row;
+  }
+  .about-section div {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .about-section h1,
+  .about-section p {
+    text-align: justify;
+  }
+  .about-section img {
+    height: 364px;
   }
 }
 @media only screen and (min-width: 1000px) {
