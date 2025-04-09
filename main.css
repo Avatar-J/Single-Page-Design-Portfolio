@@ -45,6 +45,10 @@ article {
   display: flex;
   align-items: center;
 }
+main {
+  flex-direction: column;
+  overflow: hidden;
+}
 header {
   justify-content: space-between;
   min-height: 48px;
@@ -191,6 +195,34 @@ h2 {
 .about-section button {
   background-color: var(--light-red);
 }
+.my-work-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.slider img {
+  height: 180px;
+  width: 270px;
+}
+.arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.arrows img {
+  background-color: var(--black);
+  border-radius: 50%;
+  padding: 20px;
+}
 @media only screen and (min-width: 768px) {
   .wrapper {
     max-width: 600px;
@@ -261,10 +293,14 @@ h2 {
   h2 {
     font-size: var(--heading-S);
   }
+  .slider img {
+    height: 250px;
+    width: 365px;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .wrapper {
-    max-width: 1000px;
+    max-width: 990px;
   }
   .Photography-card,
   .motion-graphics-card {
