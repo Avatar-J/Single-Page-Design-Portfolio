@@ -90,7 +90,7 @@ h3 {
   font-weight: bold;
   width: 100%;
   text-align: center;
-  padding: 10px 12px;
+  /* padding: 10px 12px; */
 }
 h1 {
   min-height: 90;
@@ -123,16 +123,17 @@ p {
   flex-direction: column;
   justify-content: flex-end;
 }
-.skills-card div {
+.skills-card h3 {
   font-size: 24px;
   font-weight: bold;
   color: var(--white-font-color);
+  text-align: left;
 }
 .graphic-design-card {
   background-image: var(--graphic-design-card-img);
   background-size: 128px 192px;
   background-color: var(--galactic-blue);
-  height: 360px;
+  height: 364px;
   width: 100%;
 }
 .design-subskills {
@@ -160,14 +161,20 @@ p {
   background-image: var(--apps-card-img);
   background-color: var(--pink);
 }
+
 .illustrations-card,
 .motion-graphics-card {
   background-size: 128px 64px;
 }
+.media-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .illustrations-card {
   background-image: var(--illustrations-card-img);
   background-color: var(--light-red);
-  height: 158px;
+  height: 154px;
   width: 100%;
 }
 .Photography-card,
@@ -195,6 +202,7 @@ p {
   align-items: center;
   gap: 20px;
 }
+
 .about-section,
 .my-work-section {
   margin-bottom: var(--margin-btw-content);
@@ -202,10 +210,14 @@ p {
 h2 {
   font-size: 26px;
 }
-.about-section img {
-  width: 80%;
+.amy-image-container {
   height: 300px;
-  flex-shrink: 0;
+  width: 300px;
+}
+.about-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .about-section button {
   background-color: var(--light-red);
@@ -224,13 +236,24 @@ h2 {
 /*slider section*/
 .slider {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 100%;
+}
+.slider::-webkit-scrollbar {
+  display: none;
 }
 .slider img {
   height: 180px;
   width: 270px;
+  border-radius: 10px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  object-fit: cover;
+  display: block;
 }
 .arrows {
   display: flex;
@@ -283,9 +306,7 @@ h2 {
     min-height: 71px;
     font-size: var(--heading-L);
   }
-  h2 {
-    font-size: var(--heading-M);
-  }
+
   p {
     padding: 0;
   }
@@ -293,19 +314,22 @@ h2 {
     height: 56px;
     width: 80%;
   }
+  .media-skills {
+    flex-direction: row;
+  }
   .skills-section {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 364px 182px;
     grid-template-areas:
       "graphic-design design-subskill"
-      "photography motion-graphics";
+      "media-skills media-skills";
   }
   .graphic-design-card,
   .design-subskills,
   .illustrations-card,
   .Photography-card,
   .motion-graphics-card {
-    width: auto;
+    max-width: 270px;
   }
   .graphic-design-card {
     grid-area: graphic-design;
@@ -316,32 +340,32 @@ h2 {
   .illustrations-card {
     grid-area: illustrations;
   }
-  .Photography-card {
-    grid-area: photography;
+  .media-skills {
+    grid-area: media-skills;
   }
-  .motion-graphics-card {
-    grid-area: motion-graphics;
-  }
-  /* .skills-section {
-    flex-direction: row;
-  }
-  .skills-section > * {
-    height: 400px;
-  } */
   .about-section {
     flex-direction: row;
+    justify-content: flex-start;
+    min-height: 365px;
+    gap: 90px;
   }
-  .about-section div {
+  .about-section h2 {
+    font-size: 40px;
+  }
+  .about-content p {
+    font-size: 18px;
+  }
+  .about-content {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
   }
-  .about-section h1,
+  .about-content {
+    flex: 1;
+  }
+  .about-section h2,
   .about-section p {
-    text-align: justify;
-  }
-  .about-section img {
-    height: 364px;
-    width: 45%;
+    text-align: left;
   }
   h2 {
     font-size: var(--heading-S);
@@ -350,21 +374,39 @@ h2 {
     height: 250px;
     width: 365px;
   }
+  .amy-image-container {
+    height: 364px;
+    width: 40%;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .wrapper {
     max-width: 990px;
   }
-  .Photography-card,
+  h2 {
+    font-size: var(--heading-M);
+  }
+  .Photography-card {
+    height: 190px;
+  }
   .motion-graphics-card {
-    height: 175px;
+    height: 154px;
   }
   .skills-section {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "graphic-design design-subskill photography "
-      "graphic-design design-subskill motion-graphics";
+    grid-template-rows: 1fr;
+    grid-template-areas: "graphic-design design-subskill media-skills ";
+  }
+  .graphic-design-card,
+  .design-subskills,
+  .illustrations-card,
+  .Photography-card,
+  .motion-graphics-card {
+    max-width: 450px;
+  }
+  .media-skills {
+    display: flex;
+    flex-direction: column;
   }
   .booking-section {
     flex-direction: row;
@@ -380,77 +422,15 @@ h2 {
     text-align: left;
     padding-left: 0;
   }
+  .amy-image-container {
+    height: 440px;
+    width: 440px;
+  }
+  .about-section {
+    min-height: 445px;
+  }
+  .slider img {
+    height: 360px;
+    width: 520px;
+  }
 }
-/* .skills-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  margin-bottom: var(--margin-btw-content);
-} */
-/* .skills-section > * {
-  height: 400px;
-  width: 100%;
-}
-.skills-card {
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-}
-.graphic-design-card {
-  background-color: var(--galactic-blue);
-  height: 400px;
-}
-
-.graphic-design-card img {
-  height: 192px;
-  width: 128px;
-}
-.design-subskills {
-  display: flex;
-  flex-direction: column;
-
-  gap: 20px;
-}
-.design-subskills > div:first-child {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.design-subskills > div:first-child > * {
-  height: 182px;
-  width: 165px;
-}
-.design-subskills > div:first-child img {
-  height: 64px;
-  width: 54px;
-}
-.UI-card {
-  background-color: var(--summer-yellow);
-}
-.apps-card {
-  background-color: var(--pink);
-}
-
-.illustrations-card {
-  background-color: var(--light-red);
-  width: 100%;
-  height: 158px;
-}
-.Photography-card,
-.motion-graphics-card {
-  width: 100%;
-  height: 182px;
-}
-.media-skills {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
-.Photography-card {
-  background-color: var(--cyan);
-}
-.motion-graphics-card {
-  background-color: var(--dark-purple);
-} */
