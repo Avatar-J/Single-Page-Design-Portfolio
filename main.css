@@ -39,17 +39,17 @@ body {
   padding: 20px;
 }
 header,
+footer,
 main,
 section,
 article {
   display: flex;
   align-items: center;
 }
-main {
-  flex-direction: column;
-  overflow: hidden;
-}
-header {
+
+header,
+footer {
+  width: 100%;
   justify-content: space-between;
   min-height: 48px;
   margin-bottom: var(--margin-btw-content);
@@ -67,7 +67,8 @@ button {
   align-items: center;
   cursor: pointer;
 }
-header button {
+header button,
+footer button {
   background-color: var(--black);
 }
 .hero-section,
@@ -76,6 +77,7 @@ main {
   flex-direction: column;
   width: 100%;
   margin-bottom: var(--margin-btw-content);
+  overflow: hidden;
 }
 h1,
 h2,
@@ -96,8 +98,8 @@ p {
   padding: 16px 29px;
 }
 .hero-section p {
-  height: 104px;
-  padding: 20px 29px;
+  min-height: 104px;
+  padding: 15px 29px;
 }
 
 /*skills section implemented with grid*/
@@ -239,6 +241,7 @@ h2 {
   background-color: var(--black);
   color: white;
   width: 100%;
+  margin-bottom: var(--margin-btw-content);
 }
 .booking-section button {
   background-color: var(--light-red);
