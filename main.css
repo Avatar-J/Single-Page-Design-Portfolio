@@ -22,6 +22,8 @@
   --illustrations-card-img: url("./assets/pattern-illustrations.svg");
   --Photography-card-img: url("./assets/pattern-photography.svg");
   --motion-graphics-card: url("./assets/pattern-motion-graphics.svg");
+  --left-arrow: url("./assets/icon-arrow-left.svg");
+  --right-arrow: url("./assets/icon-arrow-right.svg");
 }
 
 * {
@@ -67,9 +69,12 @@ button {
   align-items: center;
   cursor: pointer;
 }
-header button,
-footer button {
+.header-footer-consultation-btn {
   background-color: var(--black);
+}
+.header-footer-consultation-btn:active,
+.header-footer-consultation-btn:hover {
+  background-color: var(--galactic-blue);
 }
 .hero-section,
 main {
@@ -211,6 +216,10 @@ h2 {
   gap: 20px;
   overflow: hidden;
 }
+.section-consultation-btn:hover,
+.section-consultation-btn:active {
+  background-color: var(--summer-yellow);
+}
 
 /*slider section*/
 .slider {
@@ -230,10 +239,25 @@ h2 {
   align-items: center;
   gap: 20px;
 }
-.arrows img {
+.arrow-btn {
   background-color: var(--black);
   border-radius: 50%;
   padding: 20px;
+  height: 64px;
+  width: 64px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px 16px;
+}
+.left-arrow {
+  background-image: var(--left-arrow);
+}
+.right-arrow {
+  background-image: var(--right-arrow);
+}
+.arrow-btn:hover,
+.arrow-btn:active {
+  background-color: var(--galactic-blue);
 }
 /*booking-section*/
 .booking-section {
