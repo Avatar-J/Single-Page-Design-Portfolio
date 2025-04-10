@@ -83,7 +83,7 @@ h3 {
   font-weight: bold;
   width: 100%;
   text-align: center;
-  padding: 12px;
+  padding: 10px 12px;
 }
 h1 {
   min-height: 90;
@@ -93,6 +93,7 @@ h1 {
 p {
   color: var(--medium-brown);
   text-align: center;
+  padding: 16px 29px;
 }
 .hero-section p {
   height: 104px;
@@ -192,11 +193,12 @@ p {
   margin-bottom: var(--margin-btw-content);
 }
 h2 {
-  font-size: var(--heading-M);
+  font-size: 26px;
 }
 .about-section img {
   width: 80%;
   height: 300px;
+  flex-shrink: 0;
 }
 .about-section button {
   background-color: var(--light-red);
@@ -231,6 +233,16 @@ h2 {
   border-radius: 50%;
   padding: 20px;
 }
+/*booking-section*/
+.booking-section {
+  min-height: 320px;
+  background-color: var(--black);
+  color: white;
+  width: 100%;
+}
+.booking-section button {
+  background-color: var(--light-red);
+}
 
 @media only screen and (min-width: 768px) {
   .wrapper {
@@ -243,6 +255,12 @@ h2 {
   h1 {
     min-height: 71px;
     font-size: var(--heading-L);
+  }
+  h2 {
+    font-size: var(--heading-M);
+  }
+  p {
+    padding: 0;
   }
   .hero-section p {
     height: 56px;
@@ -320,6 +338,20 @@ h2 {
     grid-template-areas:
       "graphic-design design-subskill photography "
       "graphic-design design-subskill motion-graphics";
+  }
+  .booking-section {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .booking-section div {
+    width: 50%;
+  }
+  .booking-section p {
+    text-align: justify;
+  }
+  .booking-section h2 {
+    text-align: left;
+    padding-left: 0;
   }
 }
 /* .skills-section {
