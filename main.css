@@ -31,15 +31,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   background-color: var(--light-cream);
 }
+
 .wrapper {
   margin: 0 auto;
   padding: 20px;
 }
+
 header,
 footer,
 main,
@@ -56,6 +59,7 @@ footer {
   min-height: 48px;
   margin-bottom: var(--margin-btw-content);
 }
+
 button {
   border: none;
   border-radius: 28px;
@@ -69,13 +73,16 @@ button {
   align-items: center;
   cursor: pointer;
 }
+
 .header-footer-consultation-btn {
   background-color: var(--black);
 }
+
 .header-footer-consultation-btn:active,
 .header-footer-consultation-btn:hover {
   background-color: var(--galactic-blue);
 }
+
 .hero-section,
 main {
   display: flex;
@@ -84,6 +91,7 @@ main {
   margin-bottom: var(--margin-btw-content);
   overflow: hidden;
 }
+
 h1,
 h2,
 h3 {
@@ -92,16 +100,19 @@ h3 {
   text-align: center;
   /* padding: 10px 12px; */
 }
+
 h1 {
   min-height: 90;
   font-size: 36px;
   color: var(--black);
 }
+
 p {
   color: var(--medium-brown);
   text-align: center;
-  padding: 16px 29px;
+  /* padding: 16px 29px; */
 }
+
 .hero-section p {
   min-height: 104px;
   padding: 15px 29px;
@@ -114,6 +125,7 @@ p {
   width: 100%;
   margin-bottom: var(--margin-btw-content);
 }
+
 .skills-card {
   border-radius: 6px;
   padding: 20px;
@@ -123,12 +135,14 @@ p {
   flex-direction: column;
   justify-content: flex-end;
 }
+
 .skills-card h3 {
   font-size: 24px;
   font-weight: bold;
   color: var(--white-font-color);
   text-align: left;
 }
+
 .graphic-design-card {
   background-image: var(--graphic-design-card-img);
   background-size: 128px 192px;
@@ -136,27 +150,32 @@ p {
   height: 364px;
   width: 100%;
 }
+
 .design-subskills {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
 }
-.design-subskills > div:first-child {
+
+.design-subskills>div:first-child {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .UI-card,
 .apps-card {
   height: 190px;
   width: 47%;
   background-size: 54px 64px;
 }
+
 .UI-card {
   background-image: var(--UI-card-img);
   background-color: var(--summer-yellow);
 }
+
 .apps-card {
   background-image: var(--apps-card-img);
   background-color: var(--pink);
@@ -166,36 +185,42 @@ p {
 .motion-graphics-card {
   background-size: 128px 64px;
 }
+
 .media-skills {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .illustrations-card {
   background-image: var(--illustrations-card-img);
   background-color: var(--light-red);
   height: 154px;
   width: 100%;
 }
+
 .Photography-card,
 .motion-graphics-card {
   height: 190px;
   width: 100%;
 }
+
 .Photography-card {
   background-image: var(--Photography-card-img);
   background-color: var(--cyan);
   background-size: 160px 64px;
 }
+
 .motion-graphics-card {
   background-image: var(--motion-graphics-card);
   background-color: var(--dark-purple);
 }
 
 /*About section*/
-.about-section,
+
 .booking-section,
-.about-section div {
+.about-section .amy-image-container,
+.about-section .about-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,31 +228,50 @@ p {
   gap: 20px;
 }
 
-.about-section,
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-section {
+
+  margin-bottom: var(--margin-btw-content);
+
+}
+
 .my-work-section {
+  margin-top: -6rem;
   margin-bottom: var(--margin-btw-content);
 }
+
 h2 {
   font-size: 26px;
 }
+
 .amy-image-container {
   height: 300px;
   width: 300px;
+  /* margin-block: 2rem; */
 }
+
 .about-section img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
+
 .about-section button {
   background-color: var(--light-red);
 }
+
 .my-work-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
   overflow: hidden;
 }
+
 .section-consultation-btn:hover,
 .section-consultation-btn:active {
   background-color: var(--summer-yellow);
@@ -243,9 +287,11 @@ h2 {
   -ms-overflow-style: none;
   width: 100%;
 }
+
 .slider::-webkit-scrollbar {
   display: none;
 }
+
 .slider img {
   height: 180px;
   width: 270px;
@@ -255,6 +301,7 @@ h2 {
   object-fit: cover;
   display: block;
 }
+
 .arrows {
   display: flex;
   flex-direction: row;
@@ -262,6 +309,7 @@ h2 {
   align-items: center;
   gap: 20px;
 }
+
 .arrow-btn {
   background-color: var(--black);
   border-radius: 50%;
@@ -272,51 +320,73 @@ h2 {
   background-repeat: no-repeat;
   background-size: 15px 16px;
 }
+
 .left-arrow {
   background-image: var(--left-arrow);
 }
+
 .right-arrow {
   background-image: var(--right-arrow);
 }
+
 .arrow-btn:hover,
 .arrow-btn:active {
   background-color: var(--galactic-blue);
 }
+
 /*booking-section*/
 .booking-section {
   min-height: 320px;
   background-color: var(--black);
-  color: white;
+  color: var(--light-cream);
   width: 100%;
   margin-bottom: var(--margin-btw-content);
 }
+
 .booking-section button {
   background-color: var(--light-red);
+}
+
+.card {
+  padding-inline: 2rem;
+}
+
+.card p {
+  padding-top: 0.75rem;
 }
 
 @media only screen and (min-width: 768px) {
   .wrapper {
     max-width: 600px;
   }
+
   .hero-section {
     justify-content: center;
     align-items: center;
   }
+
   h1 {
     min-height: 71px;
     font-size: var(--heading-L);
   }
 
-  p {
-    padding: 0;
+  .card {
+    padding-inline: 2rem;
   }
+
+  p {
+    font-size: 16px;
+  }
+
   .hero-section p {
     height: 56px;
     width: 80%;
   }
+
   .media-skills {
     flex-direction: row;
   }
+
   .skills-section {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 364px 182px;
@@ -324,6 +394,7 @@ h2 {
       "graphic-design design-subskill"
       "media-skills media-skills";
   }
+
   .graphic-design-card,
   .design-subskills,
   .illustrations-card,
@@ -331,72 +402,96 @@ h2 {
   .motion-graphics-card {
     max-width: 270px;
   }
+
   .graphic-design-card {
     grid-area: graphic-design;
   }
+
   .design-subskills {
     grid-area: design-subskill;
   }
+
   .illustrations-card {
     grid-area: illustrations;
   }
+
   .media-skills {
     grid-area: media-skills;
   }
+
   .about-section {
     flex-direction: row;
     justify-content: flex-start;
+    align-items: start;
     min-height: 365px;
     gap: 90px;
   }
+
+  .about-section .about-content {
+    align-items: flex-start;
+  }
+
   .about-section h2 {
     font-size: 40px;
   }
+
   .about-content p {
     font-size: 18px;
   }
+
   .about-content {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    /* justify-content: flex-start;
+    align-items: flex-start; */
   }
+
   .about-content {
     flex: 1;
   }
+
   .about-section h2,
   .about-section p {
     text-align: left;
   }
+
   h2 {
     font-size: var(--heading-S);
   }
+
   .slider img {
     height: 250px;
     width: 365px;
   }
+
   .amy-image-container {
     height: 364px;
     width: 40%;
   }
 }
+
 @media only screen and (min-width: 1000px) {
   .wrapper {
     max-width: 990px;
   }
+
   h2 {
     font-size: var(--heading-M);
   }
+
   .Photography-card {
     height: 190px;
   }
+
   .motion-graphics-card {
     height: 154px;
   }
+
   .skills-section {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "graphic-design design-subskill media-skills ";
   }
+
   .graphic-design-card,
   .design-subskills,
   .illustrations-card,
@@ -404,33 +499,41 @@ h2 {
   .motion-graphics-card {
     max-width: 450px;
   }
+
   .media-skills {
     display: flex;
     flex-direction: column;
   }
+
   .booking-section {
     flex-direction: row;
     justify-content: space-around;
   }
+
   .booking-section div {
     width: 50%;
   }
+
   .booking-section p {
     text-align: justify;
   }
+
   .booking-section h2 {
     text-align: left;
     padding-left: 0;
   }
+
   .amy-image-container {
     height: 440px;
     width: 440px;
   }
+
   .about-section {
     min-height: 445px;
   }
+
   .slider img {
-    height: 360px;
+    height: 250px;
     width: 520px;
   }
 }
