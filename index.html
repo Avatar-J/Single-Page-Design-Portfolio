@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="dummy.css" />
 
   <title>Frontend Mentor | Single-page design portfolio</title>
 </head>
@@ -23,65 +23,66 @@
         Free Consultation
       </button>
     </header>
+  </div>
 
-    <!--main content-->
-    <main>
-      <section class="hero-section">
-        <h1>Design solutions made easy</h1>
+  <!--main content-->
+  <div class="wrapper">
+    <section class="hero-section">
+      <h1>Design solutions made easy</h1>
+      <p>
+        With over ten years of experience in various design disciplines, I’m
+        your one-stop shop for your design needs.
+      </p>
+    </section>
+
+    <!--skills cards category-->
+    <section class="skills-section">
+      <div class="skills-card graphic-design-card">
+        <h3>Graphic Design</h3>
+      </div>
+
+      <div class="design-subskills">
+        <div>
+          <div class="skills-card UI-card">
+            <h3>UI/UX</h3>
+          </div>
+
+          <div class="skills-card apps-card">
+            <h3>Apps</h3>
+          </div>
+        </div>
+
+        <div class="skills-card illustrations-card">
+          <h3>Illustrations</h3>
+        </div>
+      </div>
+
+      <div class="media-skills">
+        <div class="skills-card Photography-card">
+          <h3>Photography</h3>
+        </div>
+
+        <div class="skills-card motion-graphics-card">
+          <h3>Motion Graphics</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section tablet-layout">
+      <div class="amy-image-container">
+        <img src="./assets/image-amy.webp" alt="an image of Amy" />
+      </div>
+
+      <div class="about-content ">
+        <h2>I’m Amy, and I’d love to work on your next project</h2>
         <p>
-          With over ten years of experience in various design disciplines, I’m
-          your one-stop shop for your design needs.
+          I love working with others to create beautiful design solutions.
+          I’ve designed everything from brand illustrations to complete
+          mobile apps. I’m also handy with a camera!
         </p>
-      </section>
-
-      <!--skills cards category-->
-      <section class="skills-section">
-        <div class="skills-card graphic-design-card">
-          <h3>Graphic Design</h3>
-        </div>
-
-        <div class="design-subskills">
-          <div>
-            <div class="skills-card UI-card">
-              <h3>UI/UX</h3>
-            </div>
-
-            <div class="skills-card apps-card">
-              <h3>Apps</h3>
-            </div>
-          </div>
-
-          <div class="skills-card illustrations-card">
-            <h3>Illustrations</h3>
-          </div>
-        </div>
-
-        <div class="media-skills">
-          <div class="skills-card Photography-card">
-            <h3>Photography</h3>
-          </div>
-
-          <div class="skills-card motion-graphics-card">
-            <h3>Motion Graphics</h3>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section">
-        <div class="amy-image-container">
-          <img src="./assets/image-amy.webp" alt="an image of Amy" />
-        </div>
-
-        <div class="about-content">
-          <h2>I’m Amy, and I’d love to work on your next project</h2>
-          <p>
-            I love working with others to create beautiful design solutions.
-            I’ve designed everything from brand illustrations to complete
-            mobile apps. I’m also handy with a camera!
-          </p>
-          <button class="section-consultation-btn">Free Consultation</button>
-        </div>
-      </section>
+        <button class="section-consultation-btn">Free Consultation</button>
+      </div>
+    </section>
   </div>
 
   <section class="my-work-section">
@@ -118,8 +119,6 @@
         Free Consultation
       </button>
     </footer>
-  </div>
-  </main>
   </div>
 </body>
 

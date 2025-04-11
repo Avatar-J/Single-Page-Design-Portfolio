@@ -15,7 +15,7 @@
   --font-size: 18px;
   --btn-font-size: 14px;
   --font-family: "Plus Jakarta Sans", sans-serif;
-  --margin-btw-content: 48px;
+  --margin-btw-content: 2rem;
   --graphic-design-card-img: url("./assets/pattern-graphic-design.svg");
   --UI-card-img: url("./assets/pattern-ui-ux.svg");
   --apps-card-img: url("./assets/pattern-apps.svg");
@@ -34,22 +34,15 @@
 
 body {
   font-family: var(--font-family);
-  font-size: var(--font-size);
   background-color: var(--light-cream);
 }
 
+/* responsive and css styling for mobile */
 .wrapper {
   margin: 0 auto;
   padding: 20px;
-}
-
-header,
-footer,
-main,
-section,
-article {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 header,
@@ -60,6 +53,17 @@ footer {
   margin-bottom: var(--margin-btw-content);
 }
 
+header,
+footer {
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  min-height: 48px;
+  align-items: center;
+  margin-bottom: var(--margin-btw-content);
+}
+
 button {
   border: none;
   border-radius: 28px;
@@ -67,7 +71,7 @@ button {
   font-size: var(--btn-font-size);
   font-weight: bold;
   height: 48px;
-  padding: 27px;
+  padding: 27px 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,39 +87,29 @@ button {
   background-color: var(--galactic-blue);
 }
 
-.hero-section,
-main {
+.hero-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   margin-bottom: var(--margin-btw-content);
-  overflow: hidden;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
-  /* padding: 10px 12px; */
 }
 
 h1 {
-  min-height: 90;
   font-size: 36px;
-  color: var(--black);
-}
-
-p {
-  color: var(--medium-brown);
+  font-weight: bold;
   text-align: center;
-  /* padding: 16px 29px; */
+  padding: 0px 12px;
+  margin-bottom: 1.5rem;
 }
 
 .hero-section p {
+  color: var(--medium-brown);
+  text-align: center;
+  padding-inline: 20px;
+  font-size: 16px;
+  max-width: 285px;
   min-height: 104px;
-  padding: 15px 29px;
 }
 
 /*skills section implemented with grid*/
@@ -154,7 +148,6 @@ p {
 .design-subskills {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 20px;
 }
 
@@ -216,43 +209,31 @@ p {
   background-color: var(--dark-purple);
 }
 
-/*About section*/
-
-.booking-section,
-.about-section .amy-image-container,
-.about-section .about-content {
+/* about section */
+.about-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-}
-
-.about-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.about-section {
-
-  margin-bottom: var(--margin-btw-content);
-
-}
-
-.my-work-section {
-  margin-top: -6rem;
+  width: 100%;
   margin-bottom: var(--margin-btw-content);
 }
 
-h2 {
+.about-section h2 {
   font-size: 26px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.about-section p {
+  font-size: 16px;
+  color: var(--medium-brown);
 }
 
 .amy-image-container {
   height: 300px;
   width: 300px;
-  /* margin-block: 2rem; */
 }
 
 .about-section img {
@@ -261,15 +242,16 @@ h2 {
   object-fit: contain;
 }
 
-.about-section button {
-  background-color: var(--light-red);
-}
-
-.my-work-section {
+.about-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  overflow: hidden;
+}
+
+.section-consultation-btn {
+  background-color: var(--light-red);
 }
 
 .section-consultation-btn:hover,
@@ -278,6 +260,21 @@ h2 {
 }
 
 /*slider section*/
+.my-work-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: var(--margin-btw-content);
+}
+
+.my-work-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
 .slider {
   display: flex;
   gap: 10px;
@@ -334,57 +331,59 @@ h2 {
   background-color: var(--galactic-blue);
 }
 
-/*booking-section*/
+/*booking section*/
 .booking-section {
   min-height: 320px;
   background-color: var(--black);
   color: var(--light-cream);
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   margin-bottom: var(--margin-btw-content);
-}
-
-.booking-section button {
-  background-color: var(--light-red);
 }
 
 .card {
   padding-inline: 2rem;
 }
 
-.card p {
-  padding-top: 0.75rem;
+.card p,
+.card h2 {
+  text-align: center;
 }
 
+.card p {
+  padding-top: 0.75rem;
+  font-size: 16px;
+}
+
+.card h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.tablet-layout {
+  max-width: 600px;
+}
+
+/* media query for tablets */
 @media only screen and (min-width: 768px) {
   .wrapper {
     max-width: 600px;
   }
 
-  .hero-section {
-    justify-content: center;
-    align-items: center;
-  }
-
   h1 {
+    font-size: 44px;
+    padding: 0;
     min-height: 71px;
-    font-size: var(--heading-L);
-  }
-
-  .card {
-    padding-inline: 2rem;
-  }
-
-  p {
-    font-size: 16px;
   }
 
   .hero-section p {
-    height: 56px;
-    width: 80%;
-  }
-
-  .media-skills {
-    flex-direction: row;
+    min-height: 56px;
+    max-width: 573px;
+    font-size: var(--font-size);
   }
 
   .skills-section {
@@ -393,6 +392,10 @@ h2 {
     grid-template-areas:
       "graphic-design design-subskill"
       "media-skills media-skills";
+  }
+
+  .media-skills {
+    flex-direction: row;
   }
 
   .graphic-design-card,
@@ -421,29 +424,24 @@ h2 {
 
   .about-section {
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: start;
-    min-height: 365px;
-    gap: 90px;
-  }
-
-  .about-section .about-content {
-    align-items: flex-start;
+    gap: 30px;
   }
 
   .about-section h2 {
-    font-size: 40px;
+    font-size: var(--heading-S);
   }
 
-  .about-content p {
-    font-size: 18px;
+  .about-section p {
+    font-size: var(--font-size);
   }
 
-  .about-content {
-    flex-direction: column;
-    /* justify-content: flex-start;
-    align-items: flex-start; */
+  .amy-image-container {
+    height: 364px;
+    width: 364px;
+    /* transform: translateX(-50px); */
   }
+
+  .tablet-layout {}
 
   .about-content {
     flex: 1;
@@ -454,28 +452,38 @@ h2 {
     text-align: left;
   }
 
-  h2 {
+  .about-content {
+    align-items: flex-start;
+  }
+
+  .my-work-section h2 {
     font-size: var(--heading-S);
   }
 
   .slider img {
-    height: 250px;
-    width: 365px;
+    height: 300px;
+    width: 300px;
   }
 
-  .amy-image-container {
-    height: 364px;
-    width: 40%;
+  .card p {
+    font-size: var(--font-size);
   }
+
+  .card h2 {
+    font-size: var(--heading-S);
+  }
+
 }
 
+/* media query for desktop */
 @media only screen and (min-width: 1000px) {
   .wrapper {
-    max-width: 990px;
+    max-width: 1000px;
   }
 
-  h2 {
-    font-size: var(--heading-M);
+  h1 {
+    font-size: var(--heading-L);
+
   }
 
   .Photography-card {
@@ -500,27 +508,16 @@ h2 {
     max-width: 450px;
   }
 
+  .about-section {
+    gap: 90px;
+  }
+
+  .about-section h2 {
+    font-size: var(--heading-M);
+  }
+
   .media-skills {
-    display: flex;
     flex-direction: column;
-  }
-
-  .booking-section {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .booking-section div {
-    width: 50%;
-  }
-
-  .booking-section p {
-    text-align: justify;
-  }
-
-  .booking-section h2 {
-    text-align: left;
-    padding-left: 0;
   }
 
   .amy-image-container {
@@ -528,12 +525,23 @@ h2 {
     width: 440px;
   }
 
-  .about-section {
-    min-height: 445px;
+  .booking-section {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
   }
 
-  .slider img {
-    height: 250px;
-    width: 520px;
+  .card {
+    width: 60%;
+  }
+
+  .card p,
+  .card h2 {
+    text-align: left;
+  }
+
+  .tablet-layout {
+    max-width: 1000px;
   }
 }
