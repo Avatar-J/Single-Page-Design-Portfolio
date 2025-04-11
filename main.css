@@ -428,7 +428,7 @@ h1 {
 
   .about-section {
     flex-direction: row;
-    gap: 120px;
+    gap: 80px;
     margin-inline: auto;
     max-width: 100%;
     padding-inline: 2rem;
@@ -455,6 +455,7 @@ h1 {
 
   .about-content {
     flex: 1;
+    max-width: 400px
   }
 
   .about-section h2,
@@ -483,6 +484,17 @@ h1 {
     font-size: var(--heading-S);
   }
 
+}
+
+@media only screen and (min-width: 868px) {
+  .about-section {
+    gap: 50px;
+
+  }
+
+  .about-content {
+    max-width: 300px
+  }
 }
 
 /* media query for desktop */
@@ -519,10 +531,14 @@ h1 {
   }
 
   .about-section {
-    gap: 90px;
+    gap: 60px;
     margin-inline: auto;
     max-width: 1000px;
     padding-inline: 0;
+  }
+
+  .about-content {
+    max-width: 600px
   }
 
   .about-section h2 {
