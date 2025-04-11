@@ -211,12 +211,13 @@ h1 {
 
 /* about section */
 .about-section {
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: var(--margin-btw-content);
+  margin-bottom: 3rem;
 }
 
 .about-section h2 {
@@ -224,11 +225,13 @@ h1 {
   font-weight: bold;
   width: 100%;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .about-section p {
   font-size: 16px;
   color: var(--medium-brown);
+  text-align: center;
 }
 
 .amy-image-container {
@@ -265,7 +268,7 @@ h1 {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  margin-bottom: var(--margin-btw-content);
+  margin-bottom: 4rem;
 }
 
 .my-work-section h2 {
@@ -429,10 +432,14 @@ h1 {
 
   .about-section h2 {
     font-size: var(--heading-S);
+    margin-top: -2rem;
+    text-align: left;
   }
+
 
   .about-section p {
     font-size: var(--font-size);
+    text-align: left;
   }
 
   .amy-image-container {
