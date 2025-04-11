@@ -218,6 +218,7 @@ h1 {
   align-items: center;
   width: 100%;
   margin-bottom: 3rem;
+  margin-inline: auto;
 }
 
 .about-section h2 {
@@ -374,7 +375,7 @@ h1 {
 /* media query for tablets */
 @media only screen and (min-width: 768px) {
   .wrapper {
-    max-width: 600px;
+    max-width: 768px;
   }
 
   h1 {
@@ -406,7 +407,7 @@ h1 {
   .illustrations-card,
   .Photography-card,
   .motion-graphics-card {
-    max-width: 270px;
+    max-width: 354px;
   }
 
   .graphic-design-card {
@@ -427,7 +428,10 @@ h1 {
 
   .about-section {
     flex-direction: row;
-    gap: 30px;
+    gap: 120px;
+    margin-inline: auto;
+    max-width: 100%;
+    padding-inline: 2rem;
   }
 
   .about-section h2 {
@@ -448,7 +452,6 @@ h1 {
     /* transform: translateX(-50px); */
   }
 
-  .tablet-layout {}
 
   .about-content {
     flex: 1;
@@ -517,6 +520,9 @@ h1 {
 
   .about-section {
     gap: 90px;
+    margin-inline: auto;
+    max-width: 1000px;
+    padding-inline: 0;
   }
 
   .about-section h2 {
